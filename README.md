@@ -1,87 +1,86 @@
-🌐 Enterprise Network Infrastructure – DEPI Project 🚀
-📌 Overview
+# 📌 Project Scope – Enterprise Network Infrastructure
 
-This project presents the design and implementation of a secure, scalable, and highly available Enterprise Network Infrastructure. It simulates a real-world multi-department organization, integrating advanced networking concepts to ensure redundancy, security, branch connectivity, and cloud integration.
+## 🎯 Objective
+The main objective of this project is to design and implement a **secure, scalable, and highly available enterprise network** that connects multiple departments and branches under a unified infrastructure.
 
-The design leverages FortiGate Firewall, VLAN segmentation, DMZ hosting, VPN tunnels, and EtherChannel redundancy to deliver a robust solution that reflects industry-standard enterprise networks.
+## 🏢 Scope of Work
+- Design a hierarchical enterprise network with Core, Distribution, and Access layers.
+- Implement **VLANs and subnetting** for departmental segmentation and efficient IP allocation.
+- Deploy a **FortiGate Firewall** to enforce enterprise-wide security policies.
+- Configure a **DMZ** for hosting critical servers and services.
+- Establish **VPN tunnels** for secure remote and branch connectivity.
+- Integrate **Cloud services** to enhance scalability and flexibility.
 
-🔹 Project Scope
+## ✅ Deliverables
+- Complete network topology diagram.
+- Device configurations (Switches, Routers, FortiGate).
+- Documentation of VLANs, IP addressing, and subnetting plan.
+- Security policy definitions and firewall configurations.
+- Connectivity test results (ping, ACL, VPN).
+- # 🖧 Network Design Details
 
-Connect multiple departments and branches into one cohesive enterprise infrastructure.
+## 🔹 VLAN & Subnetting Plan
+| Department         | VLAN ID | Subnet            | Gateway        |
+|--------------------|---------|------------------|----------------|
+| IT                 | 10      | 192.168.10.0/24  | 192.168.10.1   |
+| Business           | 20      | 192.168.20.0/24  | 192.168.20.1   |
+| Arts & Design      | 30      | 192.168.30.0/24  | 192.168.30.1   |
+| Health & Sciences  | 40      | 192.168.40.0/24  | 192.168.40.1   |
+| Servers (DMZ)      | 50      | 192.168.50.0/24  | 192.168.50.1   |
 
-Implement redundancy at both Layer 2 and Layer 3.
+## 🔄 Redundancy
+- **EtherChannel (LACP)** configured between core and distribution switches.
+- Redundant uplinks between critical network devices.
 
-Secure traffic with FortiGate firewall policies and DMZ isolation.
+## 🔒 Security Features
+- **FortiGate Firewall** enforcing NAT, VPN, and ACL policies.
+- **DMZ** separating enterprise servers (Web, Syslog, DHCP).
+- ACLs restricting access between VLANs.
 
-Provide remote and branch connectivity using VPN technologies.
+## 🌍 Connectivity
+- Default routes advertised to ISP for Internet access.
+- VPN tunnels configured for secure branch communication.
+- Cloud connectivity enabled for scalability.
 
-Enable enterprise services including DHCP, Syslog, NTP, and server hosting.
+## ⚙ Services
+- **Windows Server 2016** providing DHCP, DNS, and Web hosting.
+- **Syslog Server** for centralized monitoring.
+- **NTP Server** for time synchronization across devices.
+- # 🔒 Security Policies
 
-Support future scalability with Cloud service integration.
+## FortiGate Firewall
+- NAT & PAT rules for Internet access.
+- VPN tunnels for branch-to-branch connectivity.
+- ACLs controlling HTTP, HTTPS, FTP, and Syslog traffic.
 
-🖧 Network Design Highlights
-🔄 Redundancy & Availability
+## Switch Security
+- Port Security with violation actions.
+- Disabled CDP on sensitive ports.
+- DHCP Snooping and Dynamic ARP Inspection (DAI).
+- BPDU Guard enabled to protect Spanning Tree.
 
-EtherChannel (LACP) for load balancing and fault tolerance.
+## User Access
+- SSH enabled for secure device management.
+- Role-based access for administrators.
+- 802.1X Port-Based Authentication for endpoint security.
+- # ⚙ Network Services
 
-Redundant links between distribution and core layers.
+## DHCP
+- Centralized DHCP Server with relay agents configured on routers.
+- Dynamic allocation of IP addresses per VLAN.
 
-📡 VLANs & Subnetting
+## Syslog
+- Centralized Syslog server to collect logs from all devices.
+- Alerts configured for security and violation events.
 
-Departmental segmentation using VLANs.
+## NTP
+- Dedicated NTP server for time synchronization.
+- Ensures accurate timestamps for logs and monitoring.
 
-Efficient IP subnetting for structured address management.
+## Web Services
+- Enterprise Web Server hosted in the DMZ.
+- Accessible securely via firewall rules.
 
-🔒 Security Architecture
-
-FortiGate Firewall as the central security gateway.
-
-DMZ deployment for critical servers (Web, Syslog, DHCP).
-
-Security policies enforcing controlled access to services.
-
-🌍 Connectivity
-
-VPN tunnels for secure inter-branch communication.
-
-Default route propagation for Internet access.
-
-NAT/PAT for external connectivity.
-
-Cloud integration for scalable enterprise services.
-
-⚙ Network Services
-
-Windows Server 2016 providing enterprise-level services.
-
-DHCP with relay for centralized IP allocation.
-
-Syslog server for centralized logging and monitoring.
-
-NTP server for synchronized time across devices.
-
-✅ Results
-
-Achieved 100% connectivity across all departments and branches.
-
-Ensured high availability with redundant links and EtherChannel.
-
-Enhanced security using FortiGate firewall, ACLs, VLAN isolation, and DMZ.
-
-Provided secure remote access with VPN.
-
-Delivered a scalable and future-proof design with Cloud integration.
-
-🖼 Network Topology
-
-📊 Key Benefits
-
-Enterprise-grade resilience and uptime.
-
-Strong multi-layered security controls.
-
-Centralized logging and monitoring.
-
-Seamless branch-to-branch communication.
-
-Scalable design supporting organizational growth.
+## Cloud Services
+- Cloud integration for scalable applications.
+- Supports hybrid environment for future expansion.
