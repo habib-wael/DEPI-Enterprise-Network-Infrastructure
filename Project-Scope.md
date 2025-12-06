@@ -15,10 +15,8 @@ Design routed connectivity between HQ and branch routers.
 ___________________________________________________________________
 2. FortiGate NGFW Deployment & Security
 Deploy FortiGate NGFW as the primary security and routing layer at HQ and branches.
-(Configuration validated from the uploaded Forti_Ahmed config) 
-Forti_Ahmed_7-0_0444_2025120610…
-Configure:
 
+Configure:
 Inter-VLAN routing
 NAT
 Security policies
