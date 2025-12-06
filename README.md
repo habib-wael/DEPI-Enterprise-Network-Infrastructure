@@ -23,7 +23,7 @@ The network replicates an enterprise-grade environment using **advanced routing,
 
 ## 🎯 **2. Key Features**
 
-### 🔐 **Security**
+###  **Security**
 - FortiGate NGFW policies (IPS, AV, Web Filtering, SSL inspection)
 - Next-generation traffic inspection
 - DMZ segmentation & strict access rules
@@ -37,7 +37,7 @@ The network replicates an enterprise-grade environment using **advanced routing,
 - Per-department subnetting using /27 networks  
 - IT Management zone (192.168.10.0/24)
 
-### 🌐 **WAN & Connectivity**
+###  **WAN & Connectivity**
 - SD-WAN configuration on FortiGate (dual WAN)  
 - Branch to HQ secure tunnels via IPsec  
 - Routed /30 links for WAN stability  
@@ -171,7 +171,7 @@ For the detailed scope:
 
 ---
 
-## 🧪 **7. Testing & Validation Performed**
+##  **7. Testing & Validation Performed**
 
 ✔ Inter-VLAN routing  
 ✔ Branch → HQ reachability  
