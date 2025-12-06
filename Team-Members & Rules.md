@@ -48,4 +48,4 @@
 ### **Amr Tariq Abdel-Mottaleb**
 - FortiGate HQ (with Habib)    
 - Server Infrastructure (AD, DNS, DHCP, FTP…)  (with Ahmed)
-- Branch Routing and OSPF  
+- Branch & HQ  Routing and OSPF  
