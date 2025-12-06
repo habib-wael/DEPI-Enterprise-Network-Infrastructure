@@ -136,33 +136,38 @@ For the detailed scope:
 
 ---
 
-##  **6. Repository Structure**
+##  6. Repository Structure
+
+```
+📁 Enterprise-Network-Infrastructure/
 │
-├── Project-Scope.md # Full written scope & documentation
-├── README.md # Repository introduction
+├── Project-Scope.md              # Full written scope & documentation
+├── README.md                     # Repository introduction
 │
 ├── diagrams/
-│ └── Topology.png # Network topology diagram
+│   └── Topology.png              # Network topology diagram
 │
 ├── configs/
-│ ├── FortiGate/ # HQ & Branch firewall configs
-│ ├── Cisco_Switches/ # VLANs, EtherChannel, HSRP…
-│ └── Routers/ # WAN + OSPF configs
+│   ├── FortiGate/                # HQ & Branch firewall configs
+│   ├── Cisco_Switches/           # VLANs, EtherChannel, HSRP...
+│   └── Routers/                  # WAN + OSPF configs
 │
 ├── servers/
-│ ├── AD_DS.md # Active Directory setup
-│ ├── DHCP.md # DHCP scopes
-│ ├── DNS.md # DNS structure
-│ ├── CA.md # Certificate Authority
-│ ├── IIS.md # Web server
-│ ├── FTP.md # FTP server
-│ ├── Syslog.md # Syslog config
-│ └── NTP.md # NTP service
+│   ├── AD_DS.md                  # Active Directory setup
+│   ├── DHCP.md                   # DHCP scopes
+│   ├── DNS.md                    # DNS structure
+│   ├── CA.md                     # Certificate Authority
+│   ├── IIS.md                    # Web server (IIS)
+│   ├── FTP.md                    # FTP server
+│   ├── Syslog.md                 # Syslog configuration
+│   └── NTP.md                    # NTP service
 │
 └── ise/
-├── ISE_Overview.md
-├── RADIUS_TACACS.md
-└── FortiGate_Integration.md
+    ├── ISE_Overview.md
+    ├── RADIUS_TACACS.md
+    └── FortiGate_Integration.md
+```
+
 
 ---
 
