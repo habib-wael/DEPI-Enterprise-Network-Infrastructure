@@ -1,4 +1,4 @@
-# 🚀 Enterprise Network Security Infrastructure  
+#  Enterprise Network Security Infrastructure  
 ### **Graduation Project – DEPI | Fortinet Cybersecurity Track**
 
 This repository contains the full design, implementation, and validation of a **secure, scalable, and fully segmented multi-site enterprise network infrastructure**.  
@@ -6,7 +6,7 @@ The project integrates **HQ**, **Branch Sites**, a **DMZ**, **IT Management Zone
 
 ---
 
-## 🧩 **1. Project Overview**
+##  **1. Project Overview**
 
 The goal of the project is to build a real-world enterprise network architecture that includes:
 
@@ -31,7 +31,7 @@ The network replicates an enterprise-grade environment using **advanced routing,
 - Identity-based access with Cisco ISE
 - IPsec VPN for branch connectivity
 
-### 🏢 **Network Segmentation**
+###  **Network Segmentation**
 - Dedicated VLANs for HR, Sales, Finance, Media, and IT  
 - Unified VLAN structure across all branches  
 - Per-department subnetting using /27 networks  
@@ -43,7 +43,7 @@ The network replicates an enterprise-grade environment using **advanced routing,
 - Routed /30 links for WAN stability  
 - Branch isolation enforcement
 
-### 🖥️ **Server Infrastructure**
+###  **Server Infrastructure**
 Windows Server 2016 hosting:
 - Active Directory (AD DS)  
 - DHCP scopes for HQ + branches  
@@ -56,7 +56,7 @@ Windows Server 2016 hosting:
 - SNMP  
 - Syslog  
 
-### 🛡️ **High Availability**
+###  **High Availability**
 - Active–Passive FortiGate HA cluster  
 - HSRP redundancy for default gateway  
 - EtherChannel for link aggregation  
@@ -64,7 +64,7 @@ Windows Server 2016 hosting:
 
 ---
 
-## 🗺️ **3. Network Topology**
+##  **3. Network Topology**
 
 Main Topology Diagram:
 
@@ -83,7 +83,7 @@ The topology includes:
 
 ---
 
-## 📡 **4. Technologies Used**
+##  **4. Technologies Used**
 
 ### **Networking**
 - VLANs, Trunking, EtherChannel  
@@ -116,7 +116,7 @@ The topology includes:
 
 ---
 
-## 📘 **5. Project Scope Summary**
+##  **5. Project Scope Summary**
 
 This project covers:
 
@@ -132,11 +132,11 @@ This project covers:
 - Full testing and validation
 
 For the detailed scope:  
-➡️ See **Project-Scope.md**
+ See **Project-Scope.md**
 
 ---
 
-## 📂 **6. Repository Structure**
+##  **6. Repository Structure**
 │
 ├── Project-Scope.md # Full written scope & documentation
 ├── README.md # Repository introduction
@@ -203,7 +203,7 @@ This project is part of the **DEPI – Fortinet Cybersecurity Track** and is int
 
 ---
 
-## ⭐ **10. Feedback & Contributions**
+##  **10. Feedback & Contributions**
 
 Feel free to contribute improvements or suggestions to enhance the documentation or add additional automation scripts.
 
