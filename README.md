@@ -1,103 +1,65 @@
-# 📌 Project Scope – Enterprise Network Infrastructure
+# Graduation Project – Network Topology & Design
 
-## 🎯 Objective
-The main objective of this project is to design and implement a **secure, scalable, and highly available enterprise network** that connects multiple departments and branches under a unified infrastructure.
+This repository contains the full network design and documentation for our graduation project.
 
-## 🏢 Scope of Work
-- Design a hierarchical enterprise network with Core, Distribution, and Access layers.
-- Implement **VLANs and subnetting** for departmental segmentation and efficient IP allocation.
-- Deploy a **FortiGate Firewall** to enforce enterprise-wide security policies.
-- Configure a **DMZ** for hosting critical servers and services.
-- Establish **VPN tunnels** using **IPSec** for secure remote and branch connectivity.
-- Integrate **Cloud services** to enhance scalability and flexibility.
-- Configure **OSPF (Area 0 Backbone)** to connect HQ and Branch networks.
-- Implement **HSRP** for Layer 3 redundancy and **MSTP** for loop prevention.
+## 1. Overview
 
-## ✅ Deliverables
-- Complete network topology diagram.
-- Device configurations (Switches, Routers, FortiGate).
-- Documentation of VLANs, IP addressing, and subnetting plan.
-- Security policy definitions and firewall configurations.
-- VPN configuration details with IPSec parameters.
-- High availability plan (HSRP + EtherChannel).
-- Connectivity test results (ping, ACL, VPN).
-- # 🖧 Network Design Details
+- **Type:** Enterprise campus + branches
+- **Vendor mix:** Cisco switches/routers + Fortinet FortiGate firewall + Windows Server 2016
+- **Main services:**
+  - Active Directory
+  - DNS
+  - DHCP
+  - Web Server (HTTP/HTTPS)
+  - FTP
+  - NTP
+  - SNMP
+  - Syslog
+  - Certificate Authority (CA)
+  - FSSO Integration with FortiGate
 
-## 🔹 VLAN & Subnetting Plan
-| Department            | VLAN ID | HQ Subnet        | Branch Subnet    | Host Range  |
-|-----------------------|---------|------------------|------------------|-------------|
-| IT & Management       | 10      | 192.168.10.0/24 | 192.168.110.0/24 | 1 – 254     |
-| Human Resources (HR)  | 20      | 192.168.20.0/27 | 192.168.120.0/27 | 1 – 30      |
-| Sales                 | 30      | 192.168.30.32/27| 192.168.130.32/27| 33 – 62     |
-| Finance & Accounting  | 40      | 192.168.40.64/27| 192.168.140.64/27| 65 – 94     |
-| Media                 | 50      | 192.168.50.96/27| 192.168.150.96/27| 97 – 126    |
+## 2. Topology
 
-## 🔄 Redundancy
-- **EtherChannel (LACP)** configured between core and distribution switches.
-- **HSRP** configured on multilayer switches for default gateway redundancy.
-- **MSTP** implemented to prevent loops with HQ switch as Root Bridge.
+The main topology is available in:
 
-## 🔒 Security Features
-- **FortiGate Firewall** enforcing NAT, VPN, and ACL policies.
-- **Static NAT** for Internet access through FortiGate.
-- **DMZ** separating enterprise servers (Web, Syslog, DHCP).
-- ACLs restricting access between VLANs.
+- `diagrams/Topology.png`
 
-## 🌍 Connectivity
-- **OSPF Area 0 backbone** connecting HQ and Branch.
-- Site-to-Site **IPSec VPN tunnels** between HQ and Branch.
-- Default routes propagated for Internet access.
-- Cloud connectivity enabled for scalability.
+This diagram shows:
 
-## ⚙ Services
-- **Windows Server 2016** providing DHCP, DNS, and Web hosting.
-- **Syslog Server** for centralized monitoring.
-- **NTP Server** for time synchronization across devices.
-- # 🔒 Security Policies
+- HQ Core switches and distribution switches
+- FortiGate firewall between Internal LAN and Internet
+- DMZ network for servers
+- Branch routers connected over IPsec VPN
+- Separate VLANs for:
+  - HR
+  - Sales
+  - Finance
+  - Media
+  - IT Management
+  - Branch departments
 
-## LAN Security
-- Port Security with violation actions.
-- **BPDU Guard** and **Root Guard** enabled on access ports.
-- **Dynamic ARP Inspection (DAI)** and **DHCP Snooping** configured.
-- **Disable DTP** on access ports to prevent VLAN hopping attacks.
+## 3. Documentation
 
-## WAN Security
-- **IPSec VPN tunnels** for secure branch-to-branch communication.
-- DES encryption and pre-shared keys for authentication.
-- Tunnel mode for encapsulation.
-- FortiGate firewall policies applied for WAN traffic filtering.
+- [`docs/network-topology.md`](docs/network-topology.md)  
+  High-level explanation of the physical and logical topology.
 
-## Management Security
-- **SSHv2** for secure device access.
-- Centralized authentication using **ISE, RADIUS, and TACACS+**.
-- Access control lists (ACLs) limiting management access to VTY lines.
-- # ⚙ Network Services
+- [`docs/vlans-and-subnets.md`](docs/vlans-and-subnets.md)  
+  VLAN IDs, subnetting plan, and addressing scheme (/27, /30, etc.).
 
-## DHCP
-- Centralized DHCP Server configured for both HQ and Branch VLANs.
-- DHCP relay agents enabled on routers for remote VLANs.
+- [`docs/routing-and-vpn.md`](docs/routing-and-vpn.md)  
+  Static routes / dynamic routing (if used) and IPsec VPN design between HQ and branches.
 
-## Routing (OSPF)
-- **OSPF Area 0 (Backbone)** configured for HQ and Branch.
-- Fast hello/dead timers enabled for rapid convergence.
+## 4. Tools Used
 
-## NAT
-- **Static NAT** configured on FortiGate for Internet access.
-- PAT for internal user Internet connectivity.
+- Microsoft Visio / draw.io for network diagram
+- Cisco IOS for Layer 2 / Layer 3 switches and routers
+- Fortinet FortiOS for firewall and VPN
+- Windows Server 2016 for all server roles
 
-## VPN
-- **Site-to-Site IPSec VPN tunnels** between HQ and Branch.
-- DES encryption with pre-shared keys.
-- Tunnel mode providing secure encapsulation.
+## 5. Team
 
-## Syslog
-- Centralized Syslog server collecting logs from all devices.
-- Alerts configured for security events and violations.
+- Network Design & Security: <Your Name>
+- Server Infrastructure: <Your Name / Team>
+- Documentation: <Your Name>
 
-## NTP
-- Dedicated NTP server for synchronized time across devices.
-- Ensures accurate timestamps for logs and monitoring.
-
-## High Availability
-- Dual links between switches with **EtherChannel** for load balancing.
-- **HSRP** configured for default gateway redundancy.
+> This repository is documentation-focused. Configuration files for the firewall and servers are stored in separate repositories.
