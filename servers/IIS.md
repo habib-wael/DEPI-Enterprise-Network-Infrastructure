@@ -17,3 +17,4 @@ IIS hosts internal websites used for enterprise services.
 - Access from HR/Sales/Finance based on firewall policy  
 - Access denied from unauthorized VLANs  
 
+![WhatsApp Image 2025-12-06 at 23 41 13_5b2b9765](https://github.com/user-attachments/assets/65faafda-a2e5-4697-abfd-4899f7d8828a)
