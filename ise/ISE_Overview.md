@@ -15,3 +15,4 @@ Identity Services Engine (ISE) is a centralized AAA and identity-based network a
 - Profiling  
 - Device Administration  
 
+![WhatsApp Image 2025-12-06 at 23 40 09_1ce47003](https://github.com/user-attachments/assets/b3628fd8-f1a1-46ec-9ace-c1e4a4ca2885)
