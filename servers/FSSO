@@ -1,0 +1,67 @@
+#  Fortinet Single Sign-On (FSSO)
+
+##  Overview
+Fortinet Single Sign-On (FSSO) allows FortiGate to identify users based on their Active Directory login.  
+Instead of using only IPs, firewall policies can use **users & groups** directly from AD.
+
+This enables **identity-based security** across HQ and branches.
+
+---
+
+##  Purpose in the Project
+- Allow firewall rules based on **AD user or group**
+- Track users by name in firewall logs
+- Apply different internet policies per department (HR, Sales, Finance…)
+- Automatically detect login/logout events
+- Integrate AD → ISE → FortiGate
+
+---
+
+##  How FSSO Works
+1. A user logs into Windows → AD authenticates them  
+2. The Domain Controller forwards login information to FortiGate  
+3. FortiGate binds **username ↔ IP address**  
+4. Policies apply based on user identity instead of just IP
+
+---
+
+##  Configuration Summary
+### On the Domain Controller
+- Install **FSSO Agent** or enable LDAP/NTLM authentication  
+- Allow event logs for login & logout tracking
+
+### On the FortiGate
+- Configure LDAP connection to AD  
+- Enable FSSO under User Directory  
+- Import AD Groups:
+  - HR
+  - Sales
+  - Finance
+  - Media
+  - IT Admins
+
+---
+
+##  Identity-Based Firewall Policies
+Example:
+
+| AD Group | Policy | Internet Access |
+|---------|--------|------------------|
+| HR | HR Policy | Normal restriction |
+| Sales | Sales Policy | Full internet |
+| Finance | Finance Policy | High security |
+| IT | Admin Policy | Unrestricted |
+
+---
+
+##  Testing
+- User logs into Windows → appears in FortiGate as **"user@corp.local"**  
+- Firewall policy changes based on user group  
+- Logs show username instead of IP  
+- Internet browsing blocked/allowed depending on identity
+
+---
+
+##  Result
+FSSO ensures identity-aware security and gives full visibility over users across HQ and branches.
+
