@@ -18,3 +18,4 @@ The Certificate Authority issues and manages digital certificates to secure comm
 - HTTPS works with trusted certificate  
 - ISE shows valid certificate chain  
 
+![WhatsApp Image 2025-12-06 at 23 40 49_ae1e3a85](https://github.com/user-attachments/assets/c33fa99b-a73c-48be-a7be-e2fff79537a4)
