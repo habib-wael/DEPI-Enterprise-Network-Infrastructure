@@ -1,6 +1,6 @@
 # 👥 Project Team – Enterprise Network Infrastructure
 
-## 🧑‍💼 Team Leader
+##  Team Leader
 ### **Habib Wael Suleiman**
 - Team Leader  
 - FortiGate HQ Configuration  
@@ -10,7 +10,7 @@
 
 ---
 
-## 🧑‍💻 Core Switching & Routing (HQ)
+##  Core Switching & Routing (HQ)
 ### **Ziad Maawad Mahfouz**
 - HQ Switching (VLANs, Trunking, EtherChannel)  
 - HQ Routing (OSPF, HSRP, Default Routes)  
@@ -18,7 +18,7 @@
 
 ---
 
-## 🧑‍💻 Branch Switching & Routing
+##  Branch Switching & Routing
 ### **Morcos Osama Hakim**
 - Branch Switching & VLAN Structure  
 - WAN Point-to-Point Links  
@@ -26,7 +26,7 @@
 
 ---
 
-## 🔥 FortiGate Branch Firewall
+##  FortiGate Branch Firewall
 ### **Saeed Khalid Saied**
 - FortiGate Branch Configuration  
 - Branch Security Policies  
@@ -35,7 +35,7 @@
 - HA Cluster
 ---
 
-## 🧪 Cisco ISE & Server Infrastructure
+##  Cisco ISE & Server Infrastructure
 ### **Ahmed Yasser Aziz**
 - Cisco ISE Deployment & Integration  
 - RADIUS & TACACS+ Authentication  
@@ -44,7 +44,7 @@
 - Monitoring & Syslog Integration  
 ---
 
-## 🛡️ FortiGate HQ + Servers
+##  FortiGate HQ + Servers
 ### **Amr Tariq Abdel-Mottaleb**
 - FortiGate HQ (with Habib)    
 - Server Infrastructure (AD, DNS, DHCP, FTP…)  (with Ahmed)
