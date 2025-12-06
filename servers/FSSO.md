@@ -65,3 +65,5 @@ Example:
 ##  Result
 FSSO ensures identity-aware security and gives full visibility over users across HQ and branches.
 
+![WhatsApp Image 2025-12-06 at 23 43 53_2357297a](https://github.com/user-attachments/assets/142c1db2-7984-440e-8e44-e26588ec47de)
+![WhatsApp Image 2025-12-06 at 23 43 38_4c606d2e](https://github.com/user-attachments/assets/a2c79501-dec9-4fb9-a8fe-54d24b7cb7f8)
