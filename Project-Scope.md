@@ -7,6 +7,7 @@ ________________________________________________________________________________
 
 ## 🏢 Scope of Work
 1. Enterprise Network Architecture & Segmentation
+
 Design a hierarchical enterprise network including Core, Distribution, and Access layers.
 Implement structured VLAN segmentation for HR, Sales, Finance, Media, and IT departments at both HQ and branches.
 Apply uniform VLAN IDs across all branch offices for consistency.
