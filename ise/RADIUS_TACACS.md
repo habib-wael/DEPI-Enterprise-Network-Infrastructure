@@ -19,3 +19,4 @@ RADIUS handles network access authentication (802.1X), while TACACS+ handles dev
 - Verified RADIUS login through AD  
 - TACACS admin login successful  
 
+![WhatsApp Image 2025-12-06 at 23 40 24_7c29217f](https://github.com/user-attachments/assets/7c9e1306-fdf7-4d3f-92a5-5c6ef290d205)
